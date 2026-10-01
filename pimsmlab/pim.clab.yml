@@ -1,0 +1,25 @@
+name: pimsmlab
+
+topology:
+  kinds:
+    ceos:
+      image: ceosarm:4.36.0.1F
+
+  nodes:
+    source:
+      kind: ceos
+    fhr:
+      kind: ceos
+    dr:
+      kind: ceos
+    lhr:
+      kind: ceos
+    receiver:
+      kind: ceos
+
+  links:
+    - endpoints: ["source:eth1", "fhr:eth1"]
+    - endpoints: ["fhr:eth2", "dr:eth1"]
+    - endpoints: ["fhr:eth3", "lhr:eth1"]
+    - endpoints: ["dr:eth2", "lhr:eth2"]
+    - endpoints: ["lhr:eth3", "receiver:eth1"]

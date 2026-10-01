@@ -1,0 +1,9 @@
+# Containerlab creates this directory at runtime.  It contains device state,
+# generated credentials, logs, and certificates; do not commit it.
+clab-*/
+
+# Local Ansible files
+ansible/.vault_pass
+ansible/inventory.local.yml
+.ansible/
+*.retry
