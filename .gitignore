@@ -1,0 +1,8 @@
+clab-*/ 
+.ansible/ 
+*.pcap 
+*.pcapng 
+*.logs 
+*.log.gz 
+.DS_Store
+.gitignore
